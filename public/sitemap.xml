@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Homepage -->
+  <url>
+    <loc>https://ais-pre-5e7ewuio2cttk6mtqgvogu-235124756136.asia-northeast1.run.app/</loc>
+    <lastmod>2026-10-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <!-- BSCS Semester 1 Courses -->
+  <url>
+    <loc>https://ais-pre-5e7ewuio2cttk6mtqgvogu-235124756136.asia-northeast1.run.app/#courses</loc>
+    <lastmod>2026-10-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <!-- 15-MCQ Online Subject Quizzes -->
+  <url>
+    <loc>https://ais-pre-5e7ewuio2cttk6mtqgvogu-235124756136.asia-northeast1.run.app/#quizzes</loc>
+    <lastmod>2026-10-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <!-- BSCS Study Notes Library -->
+  <url>
+    <loc>https://ais-pre-5e7ewuio2cttk6mtqgvogu-235124756136.asia-northeast1.run.app/#notes</loc>
+    <lastmod>2026-10-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- Interactive C++ Code Playground -->
+  <url>
+    <loc>https://ais-pre-5e7ewuio2cttk6mtqgvogu-235124756136.asia-northeast1.run.app/#cpp-playground</loc>
+    <lastmod>2026-10-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- About Habib BSCS Students Platform -->
+  <url>
+    <loc>https://ais-pre-5e7ewuio2cttk6mtqgvogu-235124756136.asia-northeast1.run.app/#about</loc>
+    <lastmod>2026-10-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+</urlset>

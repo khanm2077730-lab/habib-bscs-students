@@ -1,0 +1,55 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // 1. Global Catch-All: Default-deny all public access
+    match /{document=**} {
+      allow read, write: if false;
+    }
+
+    // Hardened Global Security Helpers
+    function isSignedIn() {
+      return request.auth != null;
+    }
+
+    function isOwner(userId) {
+      return isSignedIn() && request.auth.uid == userId;
+    }
+
+    function isValidId(id) {
+      return id is string && id.size() <= 128 && id.matches('^[a-zA-Z0-9_\\-]+$');
+    }
+
+    // Connection testing endpoint for health checks
+    match /test/connection {
+      allow get: if true;
+    }
+
+    // 2. Private Student Profiles & Subcollections
+    // Strictly restricted to authenticated owner UID
+    match /users/{userId} {
+      allow read, write: if isOwner(userId) && isValidId(userId);
+
+      // Quiz Attempts: /users/{userId}/quiz_attempts/{subjectId}
+      match /quiz_attempts/{subjectId} {
+        allow read, write: if isOwner(userId) && isValidId(userId);
+      }
+
+      // Course Progress & Completed Lessons: /users/{userId}/completed_lessons/{lessonId}
+      match /completed_lessons/{lessonId} {
+        allow read, write: if isOwner(userId) && isValidId(userId);
+      }
+
+      // Saved Bookmarks: /users/{userId}/bookmarks/{noteId}
+      match /bookmarks/{noteId} {
+        allow read, write: if isOwner(userId) && isValidId(userId);
+      }
+
+      // Any additional student subcollections
+      match /{subcollection=**} {
+        allow read, write: if isOwner(userId) && isValidId(userId);
+      }
+    }
+  }
+}

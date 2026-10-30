@@ -1,0 +1,18 @@
+# robots.txt for Habib BSCS Students
+# Shared App URL: https://ais-pre-5e7ewuio2cttk6mtqgvogu-235124756136.asia-northeast1.run.app/
+
+User-agent: *
+Allow: /
+Allow: /#courses
+Allow: /#quizzes
+Allow: /#notes
+Allow: /#cpp-playground
+Allow: /#about
+
+# Protect private student dashboards, API endpoints, and authentication pages
+Disallow: /dashboard
+Disallow: /auth
+Disallow: /api/
+
+# Sitemap location
+Sitemap: https://ais-pre-5e7ewuio2cttk6mtqgvogu-235124756136.asia-northeast1.run.app/sitemap.xml

@@ -1,0 +1,6 @@
+{
+  "name": "Habib BSCS Students",
+  "description": "Complete educational platform for BSCS students. Learn Programming, ICT, Calculus, English, and Natural Sciences with interactive C++ playground, 120 MCQs quizzes, and revision notes.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
